@@ -1,9 +1,15 @@
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.js';
+import Main from './pages/Main'
 
-new Vue({
+var app = new Vue({
     el: '#app',
-    data: {},
+    data: {
+      eventBus: new Vue()
+    },
     created: function() {
         console.log('Vue app created');
+    },
+    components: {
+      'main-page': Main
     }
-})
+});
