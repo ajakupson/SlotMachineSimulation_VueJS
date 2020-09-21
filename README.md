@@ -2,7 +2,8 @@
 Demo app is deployed on [Heroku](https://slot-machine-simulation.herokuapp.com/)
 ```
 project_root/
-├── index.html
+├── home.html
+├── index.php -- for Heroku
 ├── app/
 |   ├── app.js -- VueJS app
 |   ├── build/
