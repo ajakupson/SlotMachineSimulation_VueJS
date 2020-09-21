@@ -1,5 +1,5 @@
 # SlotMachineSimulation_VueJS
-Demo app is deployed on (https://slot-machine-simulation.herokuapp.com/)[Heroku]
+Demo app is deployed on [https://slot-machine-simulation.herokuapp.com/](Heroku)
 ```
 project_root/
 ├── index.html
