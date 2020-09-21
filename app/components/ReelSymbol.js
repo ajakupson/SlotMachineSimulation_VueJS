@@ -10,11 +10,7 @@ export default {
                     :style="'top:' + ((reelSymbol.position - 1) * 120) + 'px'">
                 <img :src="'assets/img/' + reelSymbol.img"/>
                </div>`,
-    created: function() {
-      this.$root.eventBus.$on('move-down-once', () => {
-        this.moveDownOnce();
-      });
-    },
+    created: function() {},
     data() {
       return {}
     },
@@ -23,21 +19,5 @@ export default {
       reelSymbol: { type: Object, required: true },
       spinSpeed: { type: Number, required: true }
     },
-    methods: {
-      moveDownOnce: function() {
-        var that = this;
-        var topOffset = (this.reelSymbol.position - 1) * 120;
-        dynamics.animate(this.$el, {
-            top: topOffset
-          }, {
-            type: dynamics.gravity,
-            duration: this.spinSpeed,
-            bounciness: 1,
-            elasticity: 1,
-            /*complete: function() {
-              that.$root.eventBus.$emit('animation-complete');
-            }*/
-          });
-      }
-    }
+    methods: {}
 }

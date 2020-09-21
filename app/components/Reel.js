@@ -26,9 +26,6 @@ export default {
       this.$root.eventBus.$on('spin-reel', (reelMinSpinDuration) => {
         this.spinReel(reelMinSpinDuration);
       });
-      this.$root.eventBus.$on('animation-complete', () => {
-        this.isAnimationComplete = true;
-      });
     },
     props: {
       reel: { type: Object, required: true },
@@ -116,7 +113,7 @@ export default {
               that.$root.eventBus.$emit("update-reels-stop-state", 1);
               if(that.numberOfReelsStopped == utils.xConstants.NUMBER_OF_REELS - 1) {
                 that.isButtonDisabled = false;
-                that.$root.eventBus.$emit("update-reels-stop-state", 1);
+                that.$root.eventBus.$emit("update-reels-stop-state", 0);
                 that.$root.eventBus.$emit("check-win-to-reels");
               }
             }
@@ -170,7 +167,6 @@ export default {
         reelSymbols: [],
         reelSpinDuration: 0,
         spinSpeed: 100,
-        isAnimationComplete: true,
         isDebug: false,
         debugSettings: [],
         isButtonDisabled: false
