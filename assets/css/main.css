@@ -51,7 +51,7 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
 }
 .reel-symbol {
-  width: 140px;
+  width: 100%;
   height: 120px;
   margin: 0;
   padding: 0;
@@ -62,6 +62,22 @@ input::-webkit-inner-spin-button {
 .reel-symbol img {
   width: 140px;
   height: 120px;
+}
+.win-line {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	background-color: red;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.5;
+	display: none;
+	animation: win-blinker 1s linear infinite;
+}
+@keyframes win-blinker {
+  50% {
+    height: 30px;
+  }
 }
 .debug-area {
 	margin: 0 50px;
@@ -307,7 +323,7 @@ button {
 .messages-container {
   width: 100%;
   height: auto;
-	min-height: 50px;
+	min-height: 40px;
   border: 5px solid #337bc4;
   border-top: 0;
   padding: 10px;

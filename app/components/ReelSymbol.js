@@ -9,6 +9,7 @@ export default {
                     :id="'reel-' + (reelIndex + 1) + '-symbol-' + reelSymbol.index"
                     :style="'top:' + ((reelSymbol.position - 1) * 120) + 'px'">
                 <img :src="'assets/img/' + reelSymbol.img"/>
+                <div class="win-line"></div>
                </div>`,
     created: function() {},
     data() {
